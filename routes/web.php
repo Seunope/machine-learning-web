@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MLController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/test', function () {
+    return view('index');
+});
+
+Route::get('/test2', function () {
+    return view('test');
+});
+
+Route::post('/', [MLController::class, 'computeRepayment'])->name('computeRepayment');
