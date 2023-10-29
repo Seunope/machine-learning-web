@@ -23,7 +23,7 @@ Route::get('/test', function () {
     return view('index');
 });
 
-Route::get('/test2', function () {
+Route::get('/ml', function () {
     return view('test');
 });
 
